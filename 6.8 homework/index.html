@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raqamlar</title>
+    <style>
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 70px;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button class="button" onclick="birxilraqam(this)">7</button>
+        <button class="button" onclick="birxilraqam(this)">3</button>
+        <button class="button" onclick="birxilraqam(this)">2</button>
+        <button class="button" onclick="birxilraqam(this)">4</button>
+        <button class="button" onclick="birxilraqam(this)">9</button>
+        <button class="button" onclick="birxilraqam(this)">5</button>
+        <button class="button" onclick="birxilraqam(this)">1</button>
+        <button class="button" onclick="birxilraqam(this)">8</button>
+        <button class="button" onclick="birxilraqam(this)">6</button>
+    
+    </div>
+    <script>
+        let lastClickedButton = null;
+        
+        function birxilraqam(button) {
+            if (button === lastClickedButton) {
+                button.style.display = 'none'; 
+                lastClickedButton = null; 
+            } else {
+                lastClickedButton = button;
+            }
+        }
+    </script>
+</body>
+</html>
